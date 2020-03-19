@@ -1,0 +1,31 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">	
+
+<suite thread-count="1" verbose="5" name="PHPTravel Suite" annotations="JDK">
+         
+  <listeners>
+  <listener class-name="FirstPackage.ListenerTest"/>
+  </listeners>
+  
+  <test name="Positive Testing" preserve-order="true">
+	 <classes>
+	   <class name="FirstPackage.Initialize"/>
+	   <class name="FirstPackage.Register"/>
+	   <class name="FirstPackage.Login"/>
+	 </classes>
+   </test>
+   
+   <test name="Negative Register" preserve-order="true">
+	 <classes>
+	   <class name="FirstPackage.Initialize"/>
+	   <class name="FirstPackage.RegisterNeg"/>
+	 </classes>
+   </test>
+   
+   <test name="Negative Login" preserve-order="true">
+	 <classes>
+	   <class name="FirstPackage.InitializeNeg"/>
+	   <class name="FirstPackage.LoginNeg"/>
+	 </classes>
+   </test>
+   
+</suite>
